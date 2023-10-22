@@ -1,0 +1,12 @@
+---
+
+services:
+  java:
+    restart: unless-stopped
+    hostname: java
+    build:
+      context: .
+    environment:
+      TERM: xterm-256color
+    volumes:
+      - ".:/app"
